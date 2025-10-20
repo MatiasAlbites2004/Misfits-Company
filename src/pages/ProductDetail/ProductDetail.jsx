@@ -19,7 +19,7 @@ export default function ProductDetail() {
     "#4b4b4b": "Gris oscuro",
     "#808080": "Gris",
     "#1a1a1a": "Negro carbón",
-    "#bdbdbd": "Gris claro",
+    "#bdbdbdbd": "Gris claro",
     "#1f1f1f": "Gris carbón",
     "#111111": "Negro intenso",
     "#333333": "Gris profundo",
@@ -74,11 +74,11 @@ export default function ProductDetail() {
       <div className={styles.detail}>
         <div className={styles.imageWrapper}>
           <img
-            src={product.image}
+            src={`${import.meta.env.BASE_URL}${product.image.replace(/^\//, "")}`}
             alt={product.name}
             className={styles.image}
-            loading="lazy" // 👈 carga diferida
-            decoding="async" // 👈 decodificación no bloqueante
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
