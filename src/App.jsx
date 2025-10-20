@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/home";
 import Products from "./pages/Products/products";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
-import Footer from "./Components/Footer/Footer"; 
+import Footer from "./Components/Footer/Footer";
 import Nuevo from "./pages/Nuevo/Nuevo";
 
 function App() {
