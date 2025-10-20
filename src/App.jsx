@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/home";
 import Products from "./pages/Products/products";
@@ -8,7 +8,7 @@ import Nuevo from "./pages/Nuevo/Nuevo";
 
 function App() {
   return (
-    <Router basename="/Misfits-Company">
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
