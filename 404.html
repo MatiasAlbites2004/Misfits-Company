@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      // Redirigir al index.html dentro del subdirectorio
-      const redirect = "/Misfits-Company/";
-      const newUrl =
-        redirect +
-        window.location.pathname.replace("/Misfits-Company", "").replace(/^\/+/, "");
-      window.location.replace(newUrl);
+      const repo = "/Misfits-Company";
+      const path = window.location.pathname.replace(repo, "");
+      window.location.replace(`${repo}/#${path}`);
     </script>
   </head>
 </html>
