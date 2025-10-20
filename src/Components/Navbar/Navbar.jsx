@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom"; 
+import { useNavigate, Link } from "react-router-dom";
 import { FaSearch, FaShoppingBasket, FaTimes } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
@@ -33,8 +33,10 @@ export default function Navbar() {
     <>
       <nav className={`${styles.navbar} ${!visible ? styles.hidden : ""}`}>
         <div className={styles.left}>
-          <a href="/nuevo">Nuevo</a>
-          <a href="/productos">Productos</a>
+          <div className={styles.left}>
+            <Link to="/nuevo">Nuevo</Link>
+            <Link to="/productos">Productos</Link>
+          </div>
         </div>
 
         <div className={styles.center}>
