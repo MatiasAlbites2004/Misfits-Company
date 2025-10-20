@@ -9,14 +9,14 @@ import Nuevo from "./pages/Nuevo/Nuevo";
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productos" element={<Products />} />
         <Route path="/nuevo" element={<Nuevo />} />
         <Route path="/producto/:id" element={<ProductDetail />} />
       </Routes>
-      <Footer />
+      <Footer /> 
     </Router>
   );
 }
