@@ -1,0 +1,87 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/Header.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  transform: translateY(40px); 
+}
+
+.title {
+  font-family: "Rock Salt", cursive;
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 2.8rem; 
+  line-height: 1.05;
+  text-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.8),
+    0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.9rem 2.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    transform: translateY(20px);
+  }
+
+  .title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .button {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}
