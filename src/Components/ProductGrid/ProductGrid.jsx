@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./ProductGrid.module.css";
 
 const ProductGrid = ({ products = [] }) => {
@@ -14,12 +15,22 @@ const ProductGrid = ({ products = [] }) => {
           <div key={product.id} className={styles.productCard}>
             <div className={styles.imageContainer}>
               {product.tag && <span className={styles.tag}>{product.tag}</span>}
-              <img src={product.image} alt={product.name} />
+              <img
+                src={product.image}
+                alt={product.name}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
+
             <div className={styles.productInfo}>
               <h3>{product.name}</h3>
               <p>{product.price}</p>
             </div>
+
+            <Link to={`/producto/${product.id}`} className={styles.overlay}>
+              Ver producto
+            </Link>
           </div>
         ))}
       </div>

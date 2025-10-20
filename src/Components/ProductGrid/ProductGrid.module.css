@@ -20,13 +20,13 @@
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #e5e5e5;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
+  transition: transform 0.25s ease;
+  will-change: transform;
 }
 
 .productCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
 }
 
 .imageContainer {
@@ -40,11 +40,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.35s ease;
+  will-change: transform;
 }
 
 .productCard:hover .imageContainer img {
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 
 .tag {
@@ -58,34 +59,33 @@
   padding: 6px 14px;
   border-radius: 3px;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .productInfo {
-  padding: 1.5rem 1.8rem;
+  padding: 1.3rem 1.8rem;
   text-align: left;
   background-color: #fff;
 }
 
 .productInfo h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #000;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
 }
 
 .productInfo p {
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
 }
 
-.productCard::after {
-  content: "VER PRODUCTO";
+/* Overlay */
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.45);
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
@@ -93,11 +93,13 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
+  text-decoration: none;
   letter-spacing: 1px;
   transition: opacity 0.3s ease;
+  will-change: opacity;
 }
 
-.productCard:hover::after {
+.productCard:hover .overlay {
   opacity: 1;
 }
 
@@ -120,31 +122,4 @@
   .productInfo h3 {
     font-size: 1rem;
   }
-}
-
-.sectionTitle {
-  text-align: center;
-  font-size: 2.4rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #111;
-  margin: 0;
-  padding: 1rem 0 2rem;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.sectionTitle::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #000;
-  margin: 0.8rem auto 0;
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-.sectionTitle:hover::after {
-  width: 140px;
 }

@@ -30,6 +30,9 @@ export default function Products() {
             No se ha encontrado resultados para <br />
             <span className={styles.searchTerm}>"{searchTerm}"</span>
           </p>
+          <a href="/productos" className={styles.backButton}>
+            Volver a la tienda
+          </a>
         </div>
       )}
     </section>
