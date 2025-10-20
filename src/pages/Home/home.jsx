@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>NUEVAS COLECCIONES</h2>
+        <h2 className={styles.sectionTitle}>COLECCIÓN DESTACADA</h2>
         <ProductGrid products={featuredProducts} />
       </section>
     </>
