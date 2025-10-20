@@ -16,7 +16,7 @@ const ProductGrid = ({ products = [] }) => {
             <div className={styles.imageContainer}>
               {product.tag && <span className={styles.tag}>{product.tag}</span>}
               <img
-                src={product.image}
+                src={`${import.meta.env.BASE_URL}${product.image.replace(/^\//, "")}`}
                 alt={product.name}
                 loading="lazy"
                 decoding="async"
