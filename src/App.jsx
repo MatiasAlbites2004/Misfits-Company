@@ -8,12 +8,12 @@ import Nuevo from "./pages/Nuevo/Nuevo";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Misfits-Company">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productos" element={<Products />} />
-         <Route path="/nuevo" element={<Nuevo />} />
+        <Route path="/nuevo" element={<Nuevo />} />
         <Route path="/producto/:id" element={<ProductDetail />} />
       </Routes>
       <Footer />

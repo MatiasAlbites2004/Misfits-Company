@@ -6,7 +6,12 @@ export default function ProductCard({ id, image, name, price, tag }) {
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
         {tag && <span className={styles.tag}>{tag}</span>}
-        <img src={image} alt={name} className={styles.image} />
+        <img
+          src={`${import.meta.env.BASE_URL}${image.replace(/^\//, "")}`}
+          alt={name}
+          className={styles.image}
+        />
+
         <div className={styles.overlay}>
           <Link to={`/producto/${id}`} className={styles.btn}>
             VER PRODUCTO
