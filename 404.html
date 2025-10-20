@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // Redirigir al index.html dentro del subdirectorio
+      const redirect = "/Misfits-Company/";
+      const newUrl =
+        redirect +
+        window.location.pathname.replace("/Misfits-Company", "").replace(/^\/+/, "");
+      window.location.replace(newUrl);
+    </script>
+  </head>
+</html>
