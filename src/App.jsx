@@ -1,13 +1,21 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/home";
+import Home from "./pages/Home/home";
+import Products from "./pages/Products/products";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import Footer from "./Components/Footer/Footer"; 
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Home />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/productos" element={<Products />} />
+        <Route path="/producto/:id" element={<ProductDetail />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

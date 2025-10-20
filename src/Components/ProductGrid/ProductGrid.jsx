@@ -1,47 +1,30 @@
+import React from "react";
 import styles from "./ProductGrid.module.css";
 
-export default function ProductGrid() {
-  const products = [
-    {
-      id: 1,
-      label: "NUEVO",
-      name: "POLO NEED A CHANGE NEGRO",
-      price: "S/ 79.90",
-      image: "/polo_negro.jpg",
-    },
-    {
-      id: 2,
-      label: "NUEVO",
-      name: "POLO NEED A CHANGE BLANCO",
-      price: "S/ 79.90",
-      image: "/polo_blanco.jpg",
-    },
-    {
-      id: 3,
-      name: "POLO BREAK RULES",
-      price: "S/ 79.90",
-      image: "/polo_break_rules.jpg",
-    },
-    {
-      id: 4,
-      name: "POLO LIMITED EDITION",
-      price: "S/ 89.90",
-      image: "/10.jpg",
-    },
-  ];
+const ProductGrid = ({ products = [] }) => {
+  if (!Array.isArray(products)) {
+    console.error("❌ Error: 'products' no es un array", products);
+    return null;
+  }
 
   return (
-    <section className={styles.grid}>
-      {products.map((p) => (
-        <div key={p.id} className={styles.card}>
-          {p.label && <span className={styles.tag}>{p.label}</span>}
-          <div className={styles.imageContainer}>
-            <img src={p.image} alt={p.name} />
+    <section className={styles.productsContainer}>
+      <div className={styles.productsGrid}>
+        {products.map((product) => (
+          <div key={product.id} className={styles.productCard}>
+            <div className={styles.imageContainer}>
+              {product.tag && <span className={styles.tag}>{product.tag}</span>}
+              <img src={product.image} alt={product.name} />
+            </div>
+            <div className={styles.productInfo}>
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+            </div>
           </div>
-          <h3 className={styles.name}>{p.name}</h3>
-          <p className={styles.price}>{p.price}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
-}
+};
+
+export default ProductGrid;

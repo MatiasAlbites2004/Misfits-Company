@@ -40,7 +40,10 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
+  position: relative;
+  top: 8px;
 }
+
 
 .icon {
   color: #fff;
@@ -82,4 +85,39 @@ a:hover {
   .icon {
     font-size: 1rem;
   }
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchForm input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.9rem;
+  width: 140px;
+  transition: all 0.3s ease;
+}
+
+.searchForm input:focus {
+  border-color: #000;
+  background-color: #f9f9f9;
+  width: 180px;
+}
+
+.searchForm button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.searchForm button:hover {
+  transform: scale(1.1);
 }
